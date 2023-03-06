@@ -21,10 +21,6 @@ class NavbarController extends Controller
         return view('navbar.service');
     }
 
-    public function blog()
-    {
-        return view('navbar.blog');
-    }
     public function contact()
     {
         return view('navbar.contact');

@@ -3,6 +3,7 @@
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\NavbarController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [NavbarController::class, 'index'])->name('index');
 Route::get('about', [NavbarController::class, 'about'])->name('about');
 Route::get('service', [NavbarController::class, 'service'])->name('service');
-Route::get('blog', [NavbarController::class, 'blog'])->name('blog');
 Route::get('contact', [NavbarController::class, 'contact'])->name('contact');
 
+Route::resource('posts', PostController::class);
